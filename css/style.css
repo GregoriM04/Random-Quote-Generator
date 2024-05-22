@@ -1,0 +1,59 @@
+/* Custom variables */
+:root {
+  --primary-color: #1DD46A;
+  --light-color: #eafef1;
+  --dark-color: #03160B;
+  --white-color: #ffffff;
+  --black-color: #000000;
+
+  /* fonts */
+  --main-font: "Poppins", sans-serif;
+  --secondary-font: "Kalam", cursive;
+
+  /* transitions */
+  --trans-3s: all 0.3s ease;
+  --trans-5s: all 0.5s ease;
+  --trans-7s: all 0.7s ease;
+
+  /* Spacing */
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-3: 1rem; /* 16px */
+  --spacing-4: 1.5rem; /* 24px */
+  --spacing-5: 3rem; /* 48px */
+}
+
+/* Resets */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+body {
+  background-color: var(--dark-color);
+}
+
+/* Media queries - From Desktop to Mobile */
+/* Largest devices (1400px and down) */
+@media only screen and (max-width: 87.5rem) {
+}
+
+/* Extra Large devices (1200px and down) */
+@media only screen and (max-width: 75rem) {
+}
+
+/* Large devices (992px and down) */
+@media only screen and (max-width: 62rem) {
+}
+
+/* Medium devices (768px and down) */
+@media only screen and (max-width: 48rem) {
+}
+
+/* Small devices (576px and down) */
+@media only screen and (max-width: 36rem) {
+}

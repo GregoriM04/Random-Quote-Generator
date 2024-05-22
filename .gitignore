@@ -1,0 +1,5 @@
+# Avoid the project being littered with unnecessary files.
+.DS_Store
+
+# Ignore the design folder
+design/
