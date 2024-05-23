@@ -125,7 +125,7 @@ body {
 
 /* Loading animation */
 .blink {
-  animation: blink 4s ease 0s infinite normal forwards;
+  animation: blink 2.5s ease 0s infinite normal forwards;
 }
 
 @keyframes blink {
