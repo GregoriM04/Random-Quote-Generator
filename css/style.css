@@ -1,8 +1,8 @@
 /* Custom variables */
 :root {
-  --primary-color: #1DD46A;
+  --primary-color: #1dd46a;
   --light-color: #eafef1;
-  --dark-color: #03160B;
+  --dark-color: #03160b;
   --white-color: #ffffff;
   --black-color: #000000;
 
@@ -37,23 +37,106 @@ body {
   background-color: var(--dark-color);
 }
 
-/* Media queries - From Desktop to Mobile */
-/* Largest devices (1400px and down) */
-@media only screen and (max-width: 87.5rem) {
+.title {
+  color: var(--light-color);
+  text-align: center;
+  margin-top: var(--spacing-5);
+  overflow: hidden;
 }
 
-/* Extra Large devices (1200px and down) */
-@media only screen and (max-width: 75rem) {
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Large devices (992px and down) */
-@media only screen and (max-width: 62rem) {
+.container {
+  background-color: var(--light-color);
+  min-width: 350px;
+  max-width: 400px;
+  width: 50%;
+  height: 30%;
+  border-radius: 20px;
+  margin: var(--spacing-1);
+  position: relative;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Medium devices (768px and down) */
-@media only screen and (max-width: 48rem) {
+.quote-picture {
+  align-self: flex-end;
+  position: relative;
+  bottom: 65px;
+  max-width: 150px;
 }
 
-/* Small devices (576px and down) */
-@media only screen and (max-width: 36rem) {
+.quote-message {
+  color: var(--dark-color);
+  position: relative;
+  bottom: 80px;
+  padding: var(--spacing-3);
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  transition: var(--trans-5s);
+}
+
+.author-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  bottom: 75px;
+}
+
+.author-container > span {
+  min-width: 75px;
+  width: fit-content;
+  background-color: var(--dark-color);
+  height: 3px;
+  margin-inline: var(--spacing-1);
+  border-radius: 50%;
+}
+
+.author-container .author {
+  text-align: center;
+}
+
+.refresh-button {
+  background-color: var(--primary-color);
+  position: relative;
+  bottom: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  padding: var(--spacing-3);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.refresh-button ion-icon {
+  font-size: 25px;
+  color: var(--dark-color);
+}
+
+/* Loading animation */
+.blink {
+  animation: blink 4s ease 0s infinite normal forwards;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0.3;
+  }
 }
