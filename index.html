@@ -43,22 +43,37 @@
     </header>
     <main class="main">
       <div class="container">
-        <img src="./images/quote-mark.png" alt="Quote mark" class="quote-picture">
-        <h4 class="quote-message">One must know oneself, if this does not serve to discover truth, it at least serves as a rule of life and there is nothing better.</h4>
-        <div class="author-container">
-            <span></span>
-            <p class="author">Blaise Pascal</p>
-            <!-- <p class="author">Pedro Federico Alberto</p> -->
-            <span></span>
+        <div class="image-wrapper">
+          <img
+            src="./images/quote-mark.png"
+            alt="Quote mark"
+            class="quote-picture"
+          />
         </div>
-        <a class="refresh-button" onclick="fetchQuotes()"><ion-icon name="refresh-outline"></ion-icon></a>
-        <!-- <button type="submit" class="refresh-button"><ion-icon name="refresh-outline"></ion-icon></button> -->
+        <h4 class="quote-message">
+          One must know oneself, if this does not serve to discover truth, it at
+          least serves as a rule of life and there is nothing better.
+        </h4>
+        <div class="author-container">
+          <span></span>
+          <p class="author">Blaise Pascal</p>
+          <span></span>
+        </div>
+        <a class="refresh-button" onclick="fetchQuotes()"
+          ><ion-icon name="refresh-circle-sharp" class="refresh-icon"></ion-icon
+        ></a>
       </div>
     </main>
 
     <!-- Ion-Icons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <!-- Main Js -->
     <script src="./main.js"></script>

@@ -1,6 +1,7 @@
 const quote = document.querySelector(".quote-message");
 const author = document.querySelector(".author");
-const loader = document.querySelector(".quote-picture");
+const loaderQuotePicture = document.querySelector(".quote-picture");
+const loaderRefreshIcon = document.querySelector(".refresh-icon");
 
 // Get a new quote
 async function fetchQuotes() {
@@ -9,7 +10,8 @@ async function fetchQuotes() {
       "https://www.stands4.com/services/v2/quotes.php?uid=12572&tokenid=Swsp3oFgp9C2kIMC&searchtype=RANDOM&format=json"
     );
 
-    loader.classList.add("blink");
+    loaderQuotePicture.classList.add("blink");
+    loaderRefreshIcon.classList.add("spin");
 
     if (!response.ok) {
       throw new Error("Ops! Something went wrong with the fetch");
@@ -20,10 +22,11 @@ async function fetchQuotes() {
     const newAuthor = data.result.author;
 
     setTimeout(() => {
-      loader.classList.remove("blink");
+      loaderQuotePicture.classList.remove("blink");
+      loaderRefreshIcon.classList.remove("spin");
       quote.innerHTML = newQuote;
       author.innerHTML = newAuthor;
-    }, 4000);
+    }, 3000);
   } catch (error) {
     console.log(error);
   }

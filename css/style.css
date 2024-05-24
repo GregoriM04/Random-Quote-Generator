@@ -40,7 +40,7 @@ body {
 .title {
   color: var(--light-color);
   text-align: center;
-  margin-top: var(--spacing-5);
+  margin: var(--spacing-5) 0;
   overflow: hidden;
 }
 
@@ -48,15 +48,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 145.2px);
 }
 
 .container {
   background-color: var(--light-color);
   min-width: 350px;
-  max-width: 400px;
+  max-width: 500px;
   width: 50%;
-  height: 30%;
+  min-height: 100px;
   border-radius: 20px;
   margin: var(--spacing-1);
   position: relative;
@@ -66,21 +66,27 @@ body {
   align-items: center;
 }
 
-.quote-picture {
-  align-self: flex-end;
+.image-wrapper {
   position: relative;
-  bottom: 65px;
-  max-width: 150px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.quote-picture {
+  position: relative;
+  bottom: 6px;
+  width: 100px;
 }
 
 .quote-message {
   color: var(--dark-color);
   position: relative;
-  bottom: 80px;
-  padding: var(--spacing-3);
+  padding: 0 var(--spacing-4);
   font-family: var(--secondary-font);
-  font-size: 16px;
+  font-size: 20px;
   transition: var(--trans-5s);
+  margin-bottom: var(--spacing-3);
 }
 
 .author-container {
@@ -88,7 +94,6 @@ body {
   position: relative;
   justify-content: center;
   align-items: center;
-  bottom: 75px;
 }
 
 .author-container > span {
@@ -107,25 +112,36 @@ body {
 .refresh-button {
   background-color: var(--primary-color);
   position: relative;
-  bottom: 30px;
+  justify-self: flex-start;
+  bottom: -30px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55px;
+  width: 64px;
+  height: 64px;
   padding: var(--spacing-3);
   border-radius: 50%;
   cursor: pointer;
 }
 
-.refresh-button ion-icon {
-  font-size: 25px;
+.refresh-button .refresh-icon {
+  font-size: 32px;
   color: var(--dark-color);
+  transition: var(--trans-3s);
+}
+
+.refresh-button:hover .refresh-icon {
+  color: var(--light-color);
 }
 
 /* Loading animation */
 .blink {
   animation: blink 2.5s ease 0s infinite normal forwards;
+}
+
+.spin {
+  animation: spin 1s ease 0s infinite;
 }
 
 @keyframes blink {
@@ -138,5 +154,15 @@ body {
   25%,
   75% {
     opacity: 0.3;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
